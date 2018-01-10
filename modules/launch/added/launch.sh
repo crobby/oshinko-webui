@@ -28,6 +28,7 @@ else
   /usr/src/app/oc create route edge oc-proxy-route --service=$WEB_ROUTE_NAME-ocproxy --path=/proxy --insecure-policy=Allow --hostname=$OSHINKO_PROXY_LOCATION
 fi
 
+. /opt/rh/rh-nodejs4/enable
 npm start
 
 

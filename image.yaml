@@ -1,0 +1,32 @@
+schema_version: 1
+
+version: 1.0
+release: dev
+name: testing/oshinko-webui-openshift
+from: rhel7:7.3
+ports:
+    - value: 8080
+modules:
+      install:
+          - name: chown
+          - name: npm_bower
+          - name: launch
+          - name: oc
+          - name: app
+packages:
+      repositories:
+          - jboss-os
+          - jboss-ocp
+          - jboss-rhscl
+      install:
+          - wget
+          - git
+          - rh-nodejs4
+          - bzip2
+artifacts:
+    - url: https://github.com/openshift/origin/releases/download/v3.7.0/openshift-origin-client-tools-v3.7.0-7ed6862-linux-64bit.tar.gz
+      md5: b1f6357fc37614d01569fe792d8eb922
+run:
+      cmd:
+          - "/usr/src/app/launch.sh"
+      workdir: /usr/src/app
