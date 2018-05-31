@@ -17,6 +17,9 @@ matrix:
 fast_finish: true
 before_install:
 before_install:
+  - echo TRAVIS_BRANCH is set to $TRAVIS_BRANCH
+  - echo TRAVIS_COMMIT is set to $TRAVIS_COMMIT
+  - echo TRAVIS_REPO_SLUG is set to $TRAVIS_REPO_SLUG
   - sudo apt-get update -qq
   - sudo sed -i "s/\DOCKER_OPTS=\"/DOCKER_OPTS=\"--insecure-registry=172.30.0.0\/16 /g" /etc/default/docker
   - sudo cat /etc/default/docker
