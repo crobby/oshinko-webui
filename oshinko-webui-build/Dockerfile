@@ -16,7 +16,7 @@
 #
 # This is a Dockerfile for the oshinko-webui-openshift:0.5.4 image.
 
-FROM nodesource/centos7:6.3.1
+FROM nodesource/centos7:6.4.0
 
 # Environment variables
 ENV \
