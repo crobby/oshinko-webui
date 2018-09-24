@@ -23,7 +23,7 @@ before_install:
   - sudo service docker restart
   - ./test/prepare.sh
 install:
-  - npm install -g protractor
+  - npm install -g protractor@5.4.0
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
