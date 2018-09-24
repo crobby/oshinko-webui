@@ -9,7 +9,7 @@ addons:
   apt:
     packages:
       - net-tools
-  chrome: stable
+  chrome: beta
 matrix:
   include:
     - env: TO_TEST=secure OPENSHIFT_VERSION=v3.10

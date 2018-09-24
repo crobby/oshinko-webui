@@ -14,7 +14,7 @@
 describe('Initial page functionality', function () {
 
   it('should login and display the clusters page', function () {
-    browser.get('/webui');
+    browser.get('/webui/#/clusters');
     expect(element(by.tagName('h2')).getText()).toEqual("Spark Clusters");
   });
 });
