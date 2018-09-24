@@ -184,9 +184,9 @@ function wait_for_webui {
 
     echo "Make sure that webui is up"
     if [ "$WEBUI_TEST_SECURE" == true ]; then
-        command="curl --insecure https://$TESTROUTE/webui"
+        command="curl --insecure https://$TESTROUTE/webui/#/clusters"
     else
-        command="curl http://$TESTROUTE/webui"
+        command="curl http://$TESTROUTE/webui/#/clusters"
     fi
     try_until_success "$command"
 }
